@@ -25,7 +25,7 @@ A fresh graduate of Electrical Engineering who passionate and has excellent skil
   <li>Organized practical laboratory work, educated younger students, and helped lecturers researches, such as microstrip antenna and matlab projects.</li>
 </ul>
 
-**Antenna & Propagation Laboratory ITS**
+**Himpunan Mahasiswa Teknik Elektro ITS**
 <ul>
   <li>Actively contributed to faculty events, trainings, and discussion forums, learnt and implemented managerial and organizational skills.</li>
   <li>Responsible for coordinating and helping 8 younger students in their student orientation to adapt to campus life.</li>
