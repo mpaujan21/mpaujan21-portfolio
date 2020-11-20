@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-<img src="images/pasfoto.jpeg" alt="Photo" style="vertical-align:middle">
+<img src="./images/pasfoto.jpeg" alt="Photo" style="vertical-align:middle">
 
 <p style="text-align:center;">
 A fresh graduate of Electrical Engineering who passionate and has excellent skills in computer networking, data analysis, machine learning. Also, experienced in campus organizations and developed interpersonal skills such as teamwork and public speaking. A longlife learner and spend his free time on music and sports.
