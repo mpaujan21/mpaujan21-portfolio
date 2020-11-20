@@ -3,9 +3,6 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-<div>
-  <img src="https://drive.google.com/file/d/1zvbVII9OQ-tB0OS8oKRrhu5xbFBBrJQO/view?usp=sharing" alt="Photo" style="vertical-align:middle"/>
-</div>
 
 <p style="text-align:center;">
 A fresh graduate of Electrical Engineering who passionate and has excellent skills in computer networking, data analysis, machine learning. Also, experienced in campus organizations and developed interpersonal skills such as teamwork and public speaking. A longlife learner and spend his free time on music and sports.
