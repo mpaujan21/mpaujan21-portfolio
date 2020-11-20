@@ -4,8 +4,37 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+<img src="images/pasfoto.png" style="vertical-align:middle">
 
+<p style="text-align:center;">
+A fresh graduate of Electrical Engineering who passionate and has excellent skills in computer networking, data analysis, machine learning. Also, experienced in campus organizations and developed interpersonal skills such as teamwork and public speaking. A longlife learner and spend his free time on music and sports.
+</p>
 
+<h4>Education</h4>
+**Institut Teknologi Sepuluh Nopember – Electrical Engineering (Telecommunication)**
+<ul>
+  <li>GPA 3.44/4.0</li>
+  <li>Graduated with Microstrip Antenna Design for Final Thesis</li>
+  <li>3 Month Intership at PT. Telkom Akses as Fiber Optic Engineer</li>
+</ul>
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+<h4>Organization Experience</h4>
+**Antenna & Propagation Laboratory ITS**
+<ul>
+  <li>Became a laboratory assistant focusing on study of antennas, radios, and other telecommunication technologies.</li>
+  <li>Organized practical laboratory work, educated younger students, and helped lecturers researches, such as microstrip antenna and matlab projects.</li>
+</ul>
+
+**Antenna & Propagation Laboratory ITS**
+<ul>
+  <li>Actively contributed to faculty events, trainings, and discussion forums, learnt and implemented managerial and organizational skills.</li>
+  <li>Responsible for coordinating and helping 8 younger students in their student orientation to adapt to campus life.</li>
+</ul>
+
+<h4>Skills</h4>
+<ul>
+  <li>Networking (CCNA), Linux, Python, Matlab, Git, Microsoft Office, Data Analysis, Data Visualization, Data Modelling, SQL, Tableau, Machine Learning, Spark, Tensorflow</li>
+  <li>Critical Thinking, Self-Motivated, Growth Mindset, Time Management, Problem Solving, Active Listening, Teamwork, Conflict Resolution, Observing People</li>
+</ul>
+
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)**.
