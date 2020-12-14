@@ -31,7 +31,7 @@ convert: .FORCE
 # stop all containers
 stop: .FORCE
 	docker-compose stop
-	docker ps | grep fastpages | awk '{print $1}' | xargs docker stop
+	docker ps | findstr fastpages | awk '{print $1}' | xargs docker stop
 
 # remove all containers
 remove: .FORCE
