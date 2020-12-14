@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Online Retail Customer Clustering with KMeans and Hierarchical Clustering | mpaujan21</title>
+<title>Segmentasi Pelanggan Toko Online dengan Clustering | mpaujan21</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Online Retail Customer Clustering with KMeans and Hierarchical Clustering" />
+<meta property="og:title" content="Segmentasi Pelanggan Toko Online dengan Clustering" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Unsupervised Learning using 2 Methods" />
-<meta property="og:description" content="Unsupervised Learning using 2 Methods" />
-<link rel="canonical" href="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/10/28/Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.html" />
-<meta property="og:url" content="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/10/28/Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.html" />
+<meta name="description" content="Clustering dengan KMeans dan Hierarchical Clustering" />
+<meta property="og:description" content="Clustering dengan KMeans dan Hierarchical Clustering" />
+<link rel="canonical" href="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/19/Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.html" />
+<meta property="og:url" content="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/19/Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.html" />
 <meta property="og:site_name" content="mpaujan21" />
 <meta property="og:image" content="https://mpaujan21.github.io/mpaujan21-portfolio/images/online-retail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-10-28T00:00:00-05:00" />
+<meta property="article:published_time" content="2020-11-19T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/10/28/Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.html","@type":"BlogPosting","headline":"Online Retail Customer Clustering with KMeans and Hierarchical Clustering","dateModified":"2020-10-28T00:00:00-05:00","datePublished":"2020-10-28T00:00:00-05:00","image":"https://mpaujan21.github.io/mpaujan21-portfolio/images/online-retail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/10/28/Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.html"},"description":"Unsupervised Learning using 2 Methods","@context":"https://schema.org"}</script>
+{"url":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/19/Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.html","@type":"BlogPosting","headline":"Segmentasi Pelanggan Toko Online dengan Clustering","dateModified":"2020-11-19T00:00:00-06:00","datePublished":"2020-11-19T00:00:00-06:00","image":"https://mpaujan21.github.io/mpaujan21-portfolio/images/online-retail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/19/Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.html"},"description":"Clustering dengan KMeans dan Hierarchical Clustering","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/mpaujan21-portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mpaujan21.github.io/mpaujan21-portfolio/feed.xml" title="mpaujan21" /><link rel="shortcut icon" type="image/x-icon" href="/mpaujan21-portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,8 +72,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Online Retail Customer Clustering with KMeans and Hierarchical Clustering </h1><p class="page-description">Unsupervised Learning using 2 Methods</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-28T00:00:00-05:00" itemprop="datePublished">
-        Oct 28, 2020
+    <h1 class="post-title p-name" itemprop="name headline">Segmentasi Pelanggan Toko Online dengan Clustering </h1><p class="page-description">Clustering dengan KMeans dan Hierarchical Clustering</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-19T00:00:00-06:00" itemprop="datePublished">
+        Nov 19, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -99,23 +99,16 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2020-10-28-Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.ipynb
+# file to edit: _notebooks/2020-11-19-Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/mpaujan21/datascience-projects/blob/main/Notebook%20Version/Machine-Learning/Online%20Retail%20Customer%20Clustering%20with%20KMeans%20and%20Hierarchical%20Clustering.ipynb">Notebook Version</a>, 
-<a href="https://github.com/mpaujan21/datascience-projects/blob/main/Code%20Version/Machine-Learning/Online%20Retail%20Customer%20Clustering%20with%20KMeans%20and%20Hierarchical%20Clustering.py">Code Version</a></p>
-<p>In this project, I used the dataset this <a href="https://www.kaggle.com/hellbuoy/online-retail-customer-clustering">source</a> which contains transactional data in a UK-based online store. I'll do clustering to segment customer behavior and the online retailer perhaps can do some targeted advertisements.</p>
-<p>I'll divide this post in 2 main parts:</p>
-<ol>
-<li>Exploratory Data Analysis</li>
-<li>Clustering Algorithms</li>
-<li>Clustering Results</li>
-</ol>
-<p>Let's look our data first.</p>
+<p><a href="https://github.com/mpaujan21/datascience-projects/blob/main/Machine-Learning/Online%20Retail%20Customer%20Clustering%20with%20KMeans%20and%20Hierarchical%20Clustering.ipynb">Versi Notebook</a></p>
+<p>Dalam project ini, saya menggunakan dataset transaksi toko online di UK dari <a href="https://www.kaggle.com/hellbuoy/online-retail-customer-clustering">Kaggle</a>. Disini saya akan melakukan segmentasi pelanggan dengan metode clustering yaitu KMeans dan Hierarchical Clustering. Clustering termasuk teknik unsupervised learning karena tidak memiliki variabel target yang sudah ada. Setelah dilakukan clustering, maka bisa dilakukan promosi untuk kluster tertentu.</p>
+<p>Berikut sekilas data yang akan digunakan:</p>
 
 </div>
 </div>
@@ -236,7 +229,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we'll check if there are any missing values.</p>
+<p>Sebelumnya akan dicek dulu jika ada data kosong.</p>
 
 </div>
 </div>
@@ -284,7 +277,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since only 24,92% values are missing, we can drop them as it won't ruin our model too much. We also want to change 'CustomerID' as string as it was integer after I checked with df.info().</p>
+<p>24,92% baris dengan data kosong akan dibuang karena tidak akan terlalu merusak performa model clustering. Lalu kolom 'CustomerID' akan dirubah formatnya menjadi string.</p>
 
 </div>
 </div>
@@ -309,20 +302,13 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We'll do feature engineering by creating 3 new columns to see the clusters between them:</p>
+<p>Selanjutnya akan dilakukan feature engineering yaitu dengan membuat 3 kolom:</p>
 <ul>
-<li><strong>Amount:</strong> Total money spent by a customer</li>
-<li><strong>Frequency:</strong> How many times a customer made transactions</li>
-<li><strong>Recency:</strong> The last time a customer made a transaction</li>
+<li><strong>Amount</strong>: Jumlah pengeluaran tiap pelanggan</li>
+<li><strong>Frequency</strong>: Seberapa sering tiap pelanggan melakukan transaksi</li>
+<li><strong>Recency</strong>: Waktu terakhir tiap pelanggan melakukan transaksi</li>
 </ul>
-<p>This is how the data now look like:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can merge the 3 mini dataframes.</p>
+<p>Berikut hasil feature engineering:</p>
 
 </div>
 </div>
@@ -413,7 +399,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let's see the analysis summary of the data.</p>
+<p>Lalu, dilihat ringkasan dari data tersebut.</p>
 
 </div>
 </div>
@@ -506,7 +492,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that there are many outliers looking at the std is much bigger than 75% quantile of the data. This is the code for removing outliers:</p>
+<p>Terdapat banyak outlier karena dapat dilihat bahwa standar deviasi jauh lebih besar dibanding 75% kuantil. Berikutnya, outlier akan dibuang dengan membuang data yang lebih dari cutoff (1,5 dari IQR):</p>
 
 </div>
 </div>
@@ -543,7 +529,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's see the pairplot of feature engineered DataFrame.</p>
+<p>Selanjutnya akan dilihat pairplot dari data tersebut.</p>
 
 </div>
 </div>
@@ -584,7 +570,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Before clustering, let's first scale the data with StandardScaler, which can transform numerical data to have mean of 0 and standard deviation of 1.</p>
+<p>Sebelum clustering, akan dilakukan transformasi data dengan StandardScaler, yang mengubah data agar memiliki rata-rata 0 dan standar deviasi 1.</p>
 
 </div>
 </div>
@@ -686,7 +672,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Clustering-Algorithms">Clustering Algorithms<a class="anchor-link" href="#Clustering-Algorithms"> </a></h1><p>We'll use the elbow method to find optimal number of clusters. It's an important step in unsupervised algorithm to determine the optimal number of clusters into which the data may be clustered. While KMeans use elbow method, Hierarchical Clustering use dendogram to visualize the optimal number of clusters.</p>
+<h1 id="Algoritma-Clustering">Algoritma Clustering<a class="anchor-link" href="#Algoritma-Clustering"> </a></h1><p>Untuk menentukan berapa cluster yang optimal, maka dalam algoritma KMeans akan digunakan teknik Elbow Method. Teknik ini mengkalkulasi inertia tiap model dengan jumlah cluster yang berbeda. Sedangkan pada Hierarchical Clustering jumlah cluster yang optimal dapat dilihat dari dendogram.</p>
 <h2 id="KMeans">KMeans<a class="anchor-link" href="#KMeans"> </a></h2>
 </div>
 </div>
@@ -727,7 +713,7 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>At n_clusters = 3, it start to decrease slowly, so 3 is the optimal n_clusters.</p>
+<p>Pada n_clusters = 3, inertia hanya turun sedikit,sehingga bisa dikatakan jumlah cluster yang optimal adalah 3.</p>
 
 </div>
 </div>
@@ -837,13 +823,6 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We'll see &amp; plot the pairplot later, as we want to compare it with hierarchical clustering.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Hierarchical-Clustering">Hierarchical Clustering<a class="anchor-link" href="#Hierarchical-Clustering"> </a></h2>
 </div>
 </div>
@@ -874,35 +853,14 @@ dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We see that the red line is when number of cluster are optimal, so we'll cut the tree into 3 clusters.</p>
+<p>Pada dendogram dapat dilihat bahwa jumlah cluster yang optimal juga 3, yang ditandai dari 3 cabang yang bisa dipotong diantara nilai 3 dan 4.</p>
 
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.cluster.hierarchy</span> <span class="kn">import</span> <span class="n">cut_tree</span>
-
-<span class="n">cluster_id</span> <span class="o">=</span> <span class="n">cut_tree</span><span class="p">(</span><span class="n">mergings</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,)</span>
-<span class="n">new_df1</span> <span class="o">=</span> <span class="n">new_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">new_df1</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_id</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Clustering-Results">Clustering Results<a class="anchor-link" href="#Clustering-Results"> </a></h1><p>Let's see the pairplot first and select the best plots.</p>
+<h1 id="Hasil-Clustering">Hasil Clustering<a class="anchor-link" href="#Hasil-Clustering"> </a></h1><p>Selanjutnya akan dilihat pairplot tiap metode clustering dan mengambil yang terbaik.</p>
 
 </div>
 </div>
@@ -1018,9 +976,9 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Cluster 0: Spent around &gt;3K and recently made transaction.</li>
-<li>Cluster 1: Not spent much money and we didn't see them for a relatively long time.</li>
-<li>Cluster 2: Not spent much money but still fresh customers.</li>
+<li>Cluster 0: Pengeluaran lebih dari 3000 dan baru saja melakukan transaksi.</li>
+<li>Cluster 1: Pengeluaran sedikit dan sudah lama tidak melakukan transaksi.</li>
+<li>Cluster 2: Pengeluaran sedikit dan baru saja melakukan transaksi.</li>
 </ul>
 
 </div>
@@ -1069,9 +1027,9 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Cluster 0: Shop a lot and recently made transaction.</li>
-<li>Cluster 1: Rarely shop and we didn't see them for a relatively long time.</li>
-<li>Cluster 2: Rarely shop but still fresh customers.</li>
+<li>Cluster 0: Sering belanja dan baru saja melakukan transaksi.</li>
+<li>Cluster 1: Jarang belanja dan sudah lama tidak melakukan transaksi.</li>
+<li>Cluster 2: Jarang belanja dan baru saja melakukan transaksi.</li>
 </ul>
 
 </div>
@@ -1120,9 +1078,9 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Cluster 0: Spent around &lt;5K and rarely made transaction.</li>
-<li>Cluster 1: Average customers with fair share of amount and frequency.</li>
-<li>Cluster 2: Priority customers who spent much more money and shop frequently.</li>
+<li>Cluster 0: Belanja kurang dari 5000 dan jarang melakukan transaksi.</li>
+<li>Cluster 1: Pelanggan rata-rata baik dari segi total belanja dan frekuensinya.</li>
+<li>Cluster 2: Pelanggan terbaik yang berbelanja lebih dari 5000 dan sering melakukan transaksi.</li>
 </ul>
 
 </div>
@@ -1130,7 +1088,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the clusters above, the online retailer can make targeted advertisements for each cluster. To conclude, I did some EDA and preprocessing then did clustering with Kmeans and Hierarchical Clustering. Thanks for reading this post :)</p>
+<p>Setelah melihat hasil cluster, dapat dilakukan promosi untuk kluster tertentu. Terima kasih :)</p>
 
 </div>
 </div>
@@ -1139,7 +1097,7 @@ dtype: float64</pre>
 
 
 
-  </div><a class="u-url" href="/mpaujan21-portfolio/machine%20learning/2020/10/28/Online-Retail-Customer-Clustering-with-KMeans-and-Hierarchical-Clustering.html" hidden></a>
+  </div><a class="u-url" href="/mpaujan21-portfolio/machine%20learning/2020/11/19/Segmentasi-Pelanggan-Toko-Online-dengan-Clustering.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">

@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Predict Used Car Prices using Regression | mpaujan21</title>
+<title>Prediksi Harga Mobil Bekas dengan Regression | mpaujan21</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Predict Used Car Prices using Regression" />
+<meta property="og:title" content="Prediksi Harga Mobil Bekas dengan Regression" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Regression with Feature Selection (SelectKBest &amp; Backward Elimination)" />
-<meta property="og:description" content="Regression with Feature Selection (SelectKBest &amp; Backward Elimination)" />
-<link rel="canonical" href="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/05/Predict-Used-Car-Prices-using-Regression.html" />
-<meta property="og:url" content="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/05/Predict-Used-Car-Prices-using-Regression.html" />
+<meta name="description" content="Regression dengan Feature Selection (SelectKBest &amp; Backward Elimination)" />
+<meta property="og:description" content="Regression dengan Feature Selection (SelectKBest &amp; Backward Elimination)" />
+<link rel="canonical" href="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/26/Prediksi-Harga-Mobil-Bekas-dengan-Regression.html" />
+<meta property="og:url" content="https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/26/Prediksi-Harga-Mobil-Bekas-dengan-Regression.html" />
 <meta property="og:site_name" content="mpaujan21" />
 <meta property="og:image" content="https://mpaujan21.github.io/mpaujan21-portfolio/images/cars.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-11-05T00:00:00-06:00" />
+<meta property="article:published_time" content="2020-11-26T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/05/Predict-Used-Car-Prices-using-Regression.html","@type":"BlogPosting","headline":"Predict Used Car Prices using Regression","dateModified":"2020-11-05T00:00:00-06:00","datePublished":"2020-11-05T00:00:00-06:00","image":"https://mpaujan21.github.io/mpaujan21-portfolio/images/cars.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/05/Predict-Used-Car-Prices-using-Regression.html"},"description":"Regression with Feature Selection (SelectKBest &amp; Backward Elimination)","@context":"https://schema.org"}</script>
+{"url":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/26/Prediksi-Harga-Mobil-Bekas-dengan-Regression.html","@type":"BlogPosting","headline":"Prediksi Harga Mobil Bekas dengan Regression","dateModified":"2020-11-26T00:00:00-06:00","datePublished":"2020-11-26T00:00:00-06:00","image":"https://mpaujan21.github.io/mpaujan21-portfolio/images/cars.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://mpaujan21.github.io/mpaujan21-portfolio/machine%20learning/2020/11/26/Prediksi-Harga-Mobil-Bekas-dengan-Regression.html"},"description":"Regression dengan Feature Selection (SelectKBest &amp; Backward Elimination)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/mpaujan21-portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mpaujan21.github.io/mpaujan21-portfolio/feed.xml" title="mpaujan21" /><link rel="shortcut icon" type="image/x-icon" href="/mpaujan21-portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,8 +72,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Predict Used Car Prices using Regression</h1><p class="page-description">Regression with Feature Selection (SelectKBest & Backward Elimination)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-05T00:00:00-06:00" itemprop="datePublished">
-        Nov 5, 2020
+    <h1 class="post-title p-name" itemprop="name headline">Prediksi Harga Mobil Bekas dengan Regression</h1><p class="page-description">Regression dengan Feature Selection (SelectKBest & Backward Elimination)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-26T00:00:00-06:00" itemprop="datePublished">
+        Nov 26, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -99,22 +99,16 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2020-11-05-Predict-Used-Car-Prices-using-Regression.ipynb
+# file to edit: _notebooks/2020-11-26-Prediksi-Harga-Mobil-Bekas-dengan-Regression.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/mpaujan21/datascience-projects/blob/main/Notebook%20Version/Machine-Learning/Predict%20Used%20Car%20Prices%20using%20Regression.ipynb">Notebook Version</a>, 
-<a href="https://github.com/mpaujan21/datascience-projects/blob/main/Code%20Version/Machine-Learning/Predict%20Used%20Car%20Prices%20using%20Regression.py">Code Version</a></p>
-<p>In this project, I used the used cars listing dataset from this <a href="https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes">source</a> to build a machine learning model (regression) to predict how much worth if someone wants to sold his/her old car. The dataset contains data of common cars in the UK, and in this project I only used BMW cars data for simplicity.</p>
-<p>I'll divide this post in 2 main parts:</p>
-<ol>
-<li>Exploratory Data Analysis</li>
-<li>Machine Learning Modelling</li>
-</ol>
-<p>Let's look our data first.</p>
+<p><a href="https://github.com/mpaujan21/datascience-projects/blob/main/Machine-Learning/Predict%20Used%20Car%20Prices%20with%20Regression.ipynb">Versi Notebook</a></p>
+<p>Dalam project ini, saya menggunakan dataset mobil bekas dari <a href="https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes">Kaggle</a>. Di dataset tersebut, terdapat data yang terpisah untuk tiap perusahaan mobil. Disini saya akan fokus untuk memprediksi harga mobil BMW bekas dengan machine learning. Model yang akan digunakan yaitu model Regression yang termasuk dalam supervised learning dan metrik evaluasi yang akan saya gunakan yaitu r2 score yang akan saya jelaskan lebih lanjut.</p>
+<p>Berikut sekilas data yang akan digunakan:</p>
 
 </div>
 </div>
@@ -235,7 +229,8 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The columns are self-explanatory here, let's look the price distribution below. We can see that it is positively-skewed and it is  a natural sight in real life.</p>
+<p>Data ini cukup simpel dan mudah dimengerti, dimana target yang akan kita prediksi yaitu price. Berikut plot distribusi dari harga mobil bekas, yang dapat kita lihat distribusinya memiliki skewness yang positif, yaitu sebagian besar nilainya berada di sebelah kiri kurva.</p>
+<p>Selanjutnya akan dilakukan Exploratory Data Analysis (EDA) untuk memahami isi datanya lebih dalam.</p>
 
 </div>
 </div>
@@ -329,7 +324,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The left graph shows that the total BMW cars were increased over the years (especially in 2019 where it rose significantly), while the right graph shows the change of BMW price during the same period. The price varied widely in 2000-2007 period.</p>
+<p>Terlihat dari grafik sebelah kiri bahwa mobil bekas yang paling banyak dijual adalah mobil keluaran 2019, yang menandakan bahwa kebanyakan orang menjual mobilnya lagi setelah satu tahun pemakaian. Lalu, pada grafik sebelah kanan ditunjukkan bahwa harga mobil meningkat drastis pada mobil yang dirilis di rentang tahun 2015-2020.</p>
 
 </div>
 </div>
@@ -383,7 +378,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Both graphs show that BMW cars mostly use Semi-Auto transmission, followed by Automatic and Manual. The price distribution follow the same pattern too.</p>
+<p>Dari kedua grafik diatas, terlihat bahwa Semi-Auto adalah jenis transmisi yang paling banyak digunakan, diikuti oleh Automatic dan Manual. Begitu juga dengan harga, yang dapat dilihat dari median di boxplot.</p>
 
 </div>
 </div>
@@ -438,7 +433,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The graph shows the BMW 3 Series is the most popular used cars.</p>
+<p>Grafik diatas menunjukkan BMW 3 Series adalah mobil bekas yang paling populer.</p>
 
 </div>
 </div>
@@ -492,7 +487,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are more BMW cars with diesel fuel than petrol, but those who use petrol are usually more expensive cars. Hybrid is much less than both diesel and petrol, and usually more expensive too.</p>
+<p>Dari kedua gambar diatas, kebanyakan mobil bekas menggunakan Diesel untuk bahan bakar dan rata-rata harga mobilnya termurah dibanding mobil dengan bahan bakar yang lain.</p>
 
 </div>
 </div>
@@ -544,7 +539,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are no semi-auto cars with mileage greater than 100k, and no manual cars priced above 40k.</p>
+<p>Kebanyakan mobil bekas yang dijual sudah menempuh jarak antara 0-50.000 km, dan yang menarik disini adalah tidak ada mobil dengan transmisi Semi-Auto yang sudah digunakan lebih dari 100 ribu km.</p>
 
 </div>
 </div>
@@ -599,13 +594,13 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are no interesting point here, as both tax, mpg, engineSize, don't have a pattern to looked at. Next, we modified our dataframe by:</p>
+<p>Tidak terlihat pola yang menarik dari ketiga gambar diatas, dimana scatter plot nya tidak menujukkan pola korelasi. Selanjutnya, data akan dimodifikasi dengan tahapan sebagai berikut:</p>
 <ul>
-<li>Change 'year' column to 'car_age'</li>
-<li>Use one hot encoding (pandas.get_dummies) to convert categorical variable (model, transmission, fuelType)</li>
-<li>Use StandardScaler, which can transform numerical data to have mean of 0 and standard deviation of 1.</li>
+<li>Mengganti kolom 'year' dengan 'car_age'</li>
+<li>Menggunakan one hot encoding untuk konversi variable yang bertipe kategori (misalnya kolom model yang terdiri dari 2 variabel seperti 1 Series dan 2 Series, diubah menjadi 2 kolom yaitu model_1 Series dan model_2 Series yang berisi nilai 0 atau 1)</li>
+<li>Menggunakan StandardScaler, yang merubah data numerik agar memiliki rata-rata 0 dan standar deviasi 1)</li>
 </ul>
-<p>Here's how the first 7 columns of the data look like after some preprocessing:</p>
+<p>Berikut 7 kolom pertama dari data setelah data preprocessing:</p>
 
 </div>
 </div>
@@ -720,7 +715,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's split the data into train and test data.</p>
+<p>Pertama-tama data akan dipisah menjadi train data dan test data.</p>
 
 </div>
 </div>
@@ -749,7 +744,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Linear-Model">Linear Model<a class="anchor-link" href="#Linear-Model"> </a></h2><p>We'll do feature selection with SelectKBest which can show the best total number of features (columns) we use for regression model. This is how the code and the result look like:</p>
+<h2 id="Linear-Model">Linear Model<a class="anchor-link" href="#Linear-Model"> </a></h2><p>Metrik evaluasi yang digunakan yaitu r2 score, yang dapat dikatakan sebagai akurasi dari regression model (rentang 0-1). Sebelumnya akan dilakukan feature selection dengan menggunakan metode SelectKBest yang menunjukkan nilai r2 score tiap jumlah fitur/kolom yang dipilih. Berikut grafik dan kodenya:</p>
 
 </div>
 </div>
@@ -812,7 +807,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>At k=31, the train and test accuracy stop increasing, so we'll use just 31 features. Now we'll try 4 different regression model and assign it to a DataFrame.</p>
+<p>Pada k=31, r2 score dari train dan test set tidak meningkat lagi, sehingga akan dipilih 31 kolom. Selanjutnya, akan dicoba 4 jenis regression model untuk melihat akurasinya pada test set:</p>
 
 </div>
 </div>
@@ -891,22 +886,22 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Note</strong>: RandomForestRegressor get renamed automatically to DecisionTreeRegressor(...) because Random Forest is basically a bunch of Decision Tree.</p>
-<p>So, the RandomForestRegressor have the highest r2 test score 0.92. (r2 score can be considered as accuracy in regression model)</p>
+<p><strong>Note</strong>: RandomForestRegressor terganti namanya menjadi DecisionTreeRegressor(...) karena pada dasarnya Random Forest adalah kumpulan dari Decision Tree.</p>
+<p>Dapat terlihat bahwa RandomForestRegressor memiliki akurasi yang tinggi, yaitu sekitar 92%.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Linear-Model-with-Backward-Elimination">Linear Model with Backward Elimination<a class="anchor-link" href="#Linear-Model-with-Backward-Elimination"> </a></h2><p>Now we'll try feature selection with different method, that is backward elimination. The steps of backward elimination are:</p>
+<h2 id="Linear-Model-dengan-Backward-Elimination">Linear Model dengan Backward Elimination<a class="anchor-link" href="#Linear-Model-dengan-Backward-Elimination"> </a></h2><p>Selanjutnya akan dicoba feature selection dengan metode lain, yaitu backward elimination. Langkah-langkah dari backward elimination adalah:</p>
 <ol>
-<li>Select a significance level(5%)</li>
-<li>Fit the model</li>
-<li>If the p-value &gt; significance level, we drop the feature with highest value. Else, our model is ready.</li>
-<li>Go back to step 2 if model is not ready yet.</li>
+<li>Memilih level signifikansi (5%)</li>
+<li>Fit model</li>
+<li>Jika p-value &gt; level signifikansi, kolom dengan p-value tertinggi akan dihilangkan. Jika tidak ada, maka modelnya sudah siap digunakan</li>
+<li>Kembali ke no 2 jika model belum siap digunakan</li>
 </ol>
-<p>This is how the code and the result look like:</p>
+<p>Berikut grafik dan kodenya:</p>
 
 </div>
 </div>
@@ -1116,21 +1111,14 @@ All p-values less than 0.05
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There is an improvement of 4% from 83,5% to 87,7% with the use of backward elimination.</p>
+<p>Terdapat peningkatan sebesar 4% untuk model Linear Regression dengan menggunakan Backward Elimination.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Polynomial-Model">Polynomial Model<a class="anchor-link" href="#Polynomial-Model"> </a></h2><p>Now we'll try using polynomial model and perform the same steps again (SelectKBest). Here is our test score and the final results:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We'll do SelectKBest again.</p>
+<h2 id="Polynomial-Feature">Polynomial Feature<a class="anchor-link" href="#Polynomial-Feature"> </a></h2><p>Berikutnya akan dicoba menggunakan fitur polinomial dan mengulang langkah tadi lagi (SelectKBest). Berikut hasil akhirnya:</p>
 
 </div>
 </div>
@@ -1273,7 +1261,7 @@ All p-values less than 0.05
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We achieve a maximum of 0.92 rsquared score with Polynomial Random Forest Regressor. To conclude, I did some EDA and preprocessing then did machine learning modelling with feature selection. Thanks for reading this post :)</p>
+<p>Didapat akurasi tertinggi yaitu 92% dengan model RandomForestRegressor dengan fitur polinomial meskipun hanya ada peningkatan 0.1% dari model dengan fitur linear. Terimakasih :)</p>
 
 </div>
 </div>
@@ -1282,7 +1270,7 @@ All p-values less than 0.05
 
 
 
-  </div><a class="u-url" href="/mpaujan21-portfolio/machine%20learning/2020/11/05/Predict-Used-Car-Prices-using-Regression.html" hidden></a>
+  </div><a class="u-url" href="/mpaujan21-portfolio/machine%20learning/2020/11/26/Prediksi-Harga-Mobil-Bekas-dengan-Regression.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
