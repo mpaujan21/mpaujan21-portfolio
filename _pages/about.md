@@ -3,12 +3,9 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-<p class="aligncenter">
-    <img src="/mpaujan21-portfolio/images_notebook/pasfoto.jpeg" alt="Pasfoto" style="width:300px;height:300px;"/>
-</p>
 
-<p style="text-align:justify;">
-I am a dedicated, hardworking and proactive individual who passionate and has excellent technical skills in computer networking, data science, machine learning, and other IT technologies. I have solid experiences in campus organizations, enabling me to develop my interpersonal and managerial skills. I am currently looking for an opportunity to utilise my technical skills in a challenging working environment and become a valuable asset to the organisation that I work for.
+<p style="text-align:center;">
+A fresh graduate of Electrical Engineering who passionate and has excellent skills in computer networking, data analysis, machine learning. Also, experienced in campus organizations and developed interpersonal skills such as teamwork and public speaking. A longlife learner and spend his free time on music and sports.
 </p>
 
 <h3>Education</h3>
@@ -34,7 +31,8 @@ I am a dedicated, hardworking and proactive individual who passionate and has ex
 
 <h3>Skills</h3>
 <ul>
-  <li>Networking (CCNA), Programming (Python, Matlab, C++), Data Science, Machine Learning (Scikit-learn), Deep Learning (Tensorflow, PyTorch), SQL, Tableau, AWS, Git, Operating Systems (Windows, Linux), Intermediate English, Microsoft Office, Statistics</li>
+  <li>Networking (CCNA), Linux, Python, Matlab, Git, Microsoft Office, Data Analysis, Data Visualization, Data Modelling, SQL, Tableau, Machine Learning, Spark, Tensorflow</li>
+  <li>Critical Thinking, Self-Motivated, Growth Mindset, Time Management, Problem Solving, Active Listening, Teamwork, Conflict Resolution, Observing People</li>
 </ul>
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)**.
